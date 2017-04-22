@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace GummyBearApp.Controllers
 {
-    public class ProductController : Controller
+    public class ProductsController : Controller
     {
         private GummyBearDbContext db = new GummyBearDbContext();
         // GET: /<controller>/
