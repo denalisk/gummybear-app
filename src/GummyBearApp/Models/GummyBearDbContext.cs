@@ -14,7 +14,7 @@ namespace GummyBearApp.Models
 
         }
 
-        public DbSet<GummyBear> GummyBear { get; set; }
+        public DbSet<GummyBear> GummyBears { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
