@@ -9,3 +9,12 @@ div.image-holder {
 div.image-holder img {
     width: 100%;
 }
+
+div.spacer {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+div.right-align {
+    float: right;
+}

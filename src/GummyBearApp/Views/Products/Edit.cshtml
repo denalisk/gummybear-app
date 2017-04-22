@@ -4,29 +4,35 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<div class="col-md-6">
+<div class="spacer right-align">
+    <a href="/Products/Delete/@Model.GummyBearId"><button class="btn btn-danger">Delete this Gummy</button></a>
+</div>
 <h2>Edit @Html.DisplayFor(model => model.Name)</h2>
-<a href="/Products/Delete/@Model.GummyBearId"><button class="btn btn-danger">Delete this Gummy</button></a>
 
 @using (Html.BeginForm())
 {
     @Html.HiddenFor(model => model.GummyBearId)
 
     @Html.LabelFor(model => model.Name)
-    @Html.TextBoxFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
 
     @Html.LabelFor(model => model.Country)
-    @Html.TextBoxFor(model => model.Country)
+    @Html.TextBoxFor(model => model.Country, new { @class = "form-control" })
 
     @Html.LabelFor(model => model.Cost)
-    @Html.TextBoxFor(model => model.Cost)
+    @Html.TextBoxFor(model => model.Cost, new { @class = "form-control" })
 
     @Html.LabelFor(model => model.ImageSrc)
-    @Html.TextBoxFor(model => model.ImageSrc)
+    @Html.TextBoxFor(model => model.ImageSrc, new { @class = "form-control" })
 
     @Html.LabelFor(model => model.ImageAlt)
-    @Html.TextBoxFor(model => model.ImageAlt)
+    @Html.TextBoxFor(model => model.ImageAlt, new { @class = "form-control" })
 
-    <input class="btn btn-success" type="submit" value="Save Changes" />
+    <div class="spacer">
+        <input class="btn btn-success" type="submit" value="Save Changes" />
+    </div>
 }
 
 <p>@Html.ActionLink("Go Back", "Index")</p>
+</div>

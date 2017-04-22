@@ -4,26 +4,35 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>A new bear!</h2>
-
 @using (Html.BeginForm())
 {
-    @Html.HiddenFor(model => model.GummyBearId)
+    <div class="well">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h2>A new bear!</h2>
+                @Html.HiddenFor(model => model.GummyBearId)
 
-    @Html.LabelFor(model => model.Name)
-    @Html.TextBoxFor(model => model.Name)
+                @Html.LabelFor(model => model.Name)
+                @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+            </div>
+            <div class="panel-body">
+                @Html.LabelFor(model => model.Country)
+                @Html.TextBoxFor(model => model.Country, new { @class = "form-control" })
 
-    @Html.LabelFor(model => model.Country)
-    @Html.TextBoxFor(model => model.Country)
+                @Html.LabelFor(model => model.Cost)
+                @Html.TextBoxFor(model => model.Cost, new { @class = "form-control" })
 
-    @Html.LabelFor(model => model.Cost)
-    @Html.TextBoxFor(model => model.Cost)
+                @Html.LabelFor(model => model.ImageSrc)
+                @Html.TextBoxFor(model => model.ImageSrc, new { @class = "form-control" })
 
-    @Html.LabelFor(model => model.ImageSrc)
-    @Html.TextBoxFor(model => model.ImageSrc)
-
-    @Html.LabelFor(model => model.ImageAlt)
-    @Html.TextBoxFor(model => model.ImageAlt)
-
-    <input class="btn btn-success" type="submit" value="Add Bear" />
+                @Html.LabelFor(model => model.ImageAlt)
+                @Html.TextBoxFor(model => model.ImageAlt, new { @class = "form-control" })
+            </div>
+            <div class="panel-heading">
+                <div class="spacer">
+                    <input class="btn btn-success" type="submit" value="Add Bear" />
+                </div>
+            </div>
+        </div>
+    </div>
 }

@@ -3,3 +3,14 @@
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+<h2>Delete Bear</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.GummyBearId)
+
+    <h2>Are you sure you want to delete this delicious treat: @Html.DisplayFor(model => model.Name)?</h2>
+    <input type="submit" value="Delete Post" />
+}
+<p>@Html.ActionLink("Go Back", "Index")</p>
