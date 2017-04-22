@@ -6,6 +6,41 @@ body ul {
     list-style: none;
 }
 
+nav.custom-navbar {
+    z-index: 100;
+    position: fixed;
+    height: 20vh;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+div.top-section {
+    background-color: lightgray;
+    height: 5vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+div.middle-section {
+    background-color: #a5f7d1;
+    height: 11vh;
+    border-bottom: 1px solid lightgray;
+}
+
+div.bottom-section {
+    text-align: center;
+    background-color: #a5f7d1;
+    height: 4vh;
+}
+
+div.right-nav-box {
+    float: right;
+}
+
+div.left-nav-box {
+    float: left;
+}
+
 div.product-holder {
     text-align: center;
 }
@@ -25,4 +60,29 @@ div.spacer {
 
 div.right-align {
     float: right;
+}
+
+div.spacer-top {
+    height: 22vh;
+}
+
+.center-align {
+    text-align: center;
+}
+
+div.banner-image {
+    width: 100%;
+    height: 30vh;
+    overflow: hidden;
+}
+
+div.banner-image img {
+    width: 100%;
+}
+
+div.link-zone {
+    margin-top: 5vh;
+    border-top: 1px solid lightgray;
+    padding-top: 3vh;
+    margin-bottom: 5vh;
 }

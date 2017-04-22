@@ -3,3 +3,38 @@
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+<div class="main-content">
+    <div class="banner-image">
+        <img src="https://cdn.albanesecandy.com/candy-store/images/products/popup/12-flavor-gummi-bears_7.jpg" alt="gummy bear banner image" />
+    </div>
+    <br />
+    <div class="jumbotron center-align"><h1>Everyone</h1></div>
+    <br />
+    <div class="banner-image">
+        <img src="http://wallpapercave.com/wp/glaVHrx.jpg" alt="gummy bear banner image" />
+    </div>
+    <br />
+    <div class="jumbotron center-align"><h1>LOVES</h1></div>
+    <br />
+    <div class="banner-image">
+        <img src="http://universe.byu.edu/wp-content/uploads/2013/09/iStock_000010188843Medium.jpg" alt="gummy bear banner image" />
+    </div>
+    <br />
+    <div class="jumbotron center-align"><h1>Gummy Bears</h1></div>
+    <br />
+    <div class="banner-image">
+        <img src="https://cdn.albanesecandy.com/candy-store/images/products/popup/12-flavor-gummi-bears_7.jpg" alt="gummy bear banner image" />
+    </div>
+</div>
+<div class="link-zone center-align">
+    <div class="col-md-4">
+        @Html.ActionLink("Home", "Index", "Home")
+    </div>
+    <div class="col-md-4">
+        @Html.ActionLink("Products", "Index", "Products")
+    </div>
+    <div class="col-md-4">
+        @Html.ActionLink("Create", "Create", "Products")
+    </div>
+</div>

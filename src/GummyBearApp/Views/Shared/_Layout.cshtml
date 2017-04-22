@@ -8,18 +8,38 @@
     <title>Gummy Bear Kingdom</title>
 </head>
 <body>
-    <div class="container">
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <ul class="nav navbar-left">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                </ul>
-                <ul class="nav navbar-right">
-                    <li>@Html.ActionLink("Products", "Index", "Products")</li>
-                    <li>@Html.ActionLink("Create", "Create", "Products")</li>
-                </ul>
+<nav class="custom-navbar">
+    <div class="top-section">
+        <div class="container">
+            <div class="right-nav-box">
+                <h4>Free shipping on all orders!!!*</h4>
             </div>
-        </nav>
+            <div class="left-nav-box">
+                <h4>Save 50% with our special offer membership rewards program!</h4>
+            </div>
+        </div>
+    </div>
+    <div class="middle-section center-align">
+        <div class="container">
+            <h4>
+                call toll-free 888-555-5555
+                Mon. - Fri. 8:30 a.m.-5:30 p.m. Eastern
+            </h4>
+            <h1>Gummy Bear Kingdom</h1>
+        </div>
+    </div>
+    <div class="bottom-section center-align">
+        <div class="container">
+            <h3><span class="main-link">@Html.ActionLink("Home", "Index", "Home")</span> | <span class="main-link">@Html.ActionLink("Products", "Index", "Products")</span> | <span class="main-link">@Html.ActionLink("Create", "Create", "Products")</span></h3>
+            
+            
+
+        </div>
+    </div>
+</nav>
+<div class="spacer-top"></div>
+    <div class="container">
+        
         @RenderBody()
     </div>
 </body>
