@@ -1,22 +1,35 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+using GummyBearApp.Models;
 
 namespace GummyBearApp.Models
 {
-    [Table("GummyBear")]
-    public class GummyBear
+    public class GummyBearDbContext : DbContext
     {
-        [Key]
-        public int GummyBearId { get; set; }
-        public string Name { get; set; }
-        public string Country { get; set; }
-        public int Cost { get; set; }
-        public string ImageSrc { get; set; }
-        public string ImageAlt { get; set; }
+        public GummyBearDbContext()
+        {
 
+        }
+
+        public DbSet<GummyBear> GummyBear { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        {
+            options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=GummyBearDb;integrated security=True");
+        }
+
+        public GummyBearDbContext(DbContextOptions<GummyBearDbContext> options)
+            : base(options)
+        {
+
+        }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+        }
     }
 }
