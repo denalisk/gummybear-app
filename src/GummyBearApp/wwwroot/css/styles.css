@@ -1,5 +1,13 @@
 ﻿body {
-    
+    background-color: #a5f7d1;
+}
+
+body ul {
+    list-style: none;
+}
+
+div.product-holder {
+    text-align: center;
 }
 
 div.image-holder {

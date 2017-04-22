@@ -12,27 +12,40 @@
 
 @using (Html.BeginForm())
 {
-    @Html.HiddenFor(model => model.GummyBearId)
+    <div class="well">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                @Html.HiddenFor(model => model.GummyBearId)
 
-    @Html.LabelFor(model => model.Name)
-    @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+                @Html.LabelFor(model => model.Name)
+                @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+            </div>
+            <div class="panel-body">
+                @Html.LabelFor(model => model.Country)
+                @Html.TextBoxFor(model => model.Country, new { @class = "form-control" })
 
-    @Html.LabelFor(model => model.Country)
-    @Html.TextBoxFor(model => model.Country, new { @class = "form-control" })
+                @Html.LabelFor(model => model.Cost)
+                @Html.TextBoxFor(model => model.Cost, new { @class = "form-control" })
 
-    @Html.LabelFor(model => model.Cost)
-    @Html.TextBoxFor(model => model.Cost, new { @class = "form-control" })
+                @Html.LabelFor(model => model.ImageSrc)
+                @Html.TextBoxFor(model => model.ImageSrc, new { @class = "form-control" })
 
-    @Html.LabelFor(model => model.ImageSrc)
-    @Html.TextBoxFor(model => model.ImageSrc, new { @class = "form-control" })
-
-    @Html.LabelFor(model => model.ImageAlt)
-    @Html.TextBoxFor(model => model.ImageAlt, new { @class = "form-control" })
-
-    <div class="spacer">
-        <input class="btn btn-success" type="submit" value="Save Changes" />
+                @Html.LabelFor(model => model.ImageAlt)
+                @Html.TextBoxFor(model => model.ImageAlt, new { @class = "form-control" })
+            </div>
+            <div class="panel-heading">
+                <div class="spacer">
+                    <input class="btn btn-success" type="submit" value="Save Changes" />
+                </div>
+            </div>
+        </div>
     </div>
 }
 
 <p>@Html.ActionLink("Go Back", "Index")</p>
+</div>
+<div class="col-md-6">
+    <div class="image-holder">
+        <img src="@Model.ImageSrc" alt="@Model.ImageAlt" />
+    </div>
 </div>

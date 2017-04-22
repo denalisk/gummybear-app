@@ -8,26 +8,28 @@
 
 @foreach (var bear in Model)
 {
-    <div class="product-holder col-md-3">
-        <a href="Products/Detail/@bear.GummyBearId">
-            <div class="image-holder">
-                <img src="@bear.ImageSrc" alt="@bear.ImageAlt" />
-            </div>
-        </a>
-        <ul>
-            <li>
-                @Html.DisplayFor(model => bear.Name)
-            </li>
-            <li>
-                @Html.DisplayFor(model => bear.Cost)
-            </li>
-            <li>
-                @Html.DisplayFor(model => bear.Country)
-            </li>
+    <div class="product-holder col-md-4">
+        <div class="well">
+            <a href="Products/Detail/@bear.GummyBearId">
+                <div class="image-holder">
+                    <img src="@bear.ImageSrc" alt="@bear.ImageAlt" />
+                </div>
+            </a>
+            <div>
+                <h3>
+                    Bear Name: @Html.DisplayFor(model => bear.Name)
+                </h3>
+                <h4>
+                    Our Price: $@Html.DisplayFor(model => bear.Cost)
+                </h4>
+                <h4>
+                    Country of Origin: @Html.DisplayFor(model => bear.Country)
+                </h4>
 
-        </ul>
-        <br />
-        <a href="Products/Edit/@bear.GummyBearId"><button class="btn btn-warning">Edit this bear</button></a>
+            </div>
+            <br />
+            <a href="Products/Edit/@bear.GummyBearId"><button class="btn btn-warning">Edit this bear</button></a>
+        </div>
     </div>
 
 }
