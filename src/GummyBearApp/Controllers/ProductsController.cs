@@ -26,6 +26,12 @@ namespace GummyBearApp.Controllers
             return View();
         }
 
+        public IActionResult Detail(int id)
+        {
+            var thisBear = db.GummyBears.FirstOrDefault(bears => bears.GummyBearId == id);
+            return View(thisBear);
+        }
+
         [HttpPost]
         public IActionResult Create(GummyBear gummyBear)
         {

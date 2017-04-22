@@ -1,3 +1,11 @@
 ﻿body {
-    background-color: red;
+    
+}
+
+div.image-holder {
+    width: 100%;
+}
+
+div.image-holder img {
+    width: 100%;
 }

@@ -8,10 +8,12 @@
 
 @foreach (var bear in Model)
 {
-    <div class="product-holder">
-        <div class="image-holder">
-            <img src="@bear.ImageSrc" alt="@bear.ImageAlt"
-        </div>
+    <div class="product-holder col-md-3">
+        <a href="Products/Detail/@bear.GummyBearId">
+            <div class="image-holder">
+                <img src="@bear.ImageSrc" alt="@bear.ImageAlt"
+            </div>
+        </a>
         <ul>
             <li>
                 @Html.DisplayFor(model => bear.Name)
