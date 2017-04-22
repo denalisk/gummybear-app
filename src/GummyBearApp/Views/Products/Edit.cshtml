@@ -5,6 +5,7 @@
 }
 
 <h2>Edit @Html.DisplayFor(model => model.Name)</h2>
+<a href="/Products/Delete/@Model.GummyBearId"><button class="btn btn-danger">Delete this Gummy</button></a>
 
 @using (Html.BeginForm())
 {
