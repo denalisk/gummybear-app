@@ -24,7 +24,9 @@
 >Requirements: MicroSoft Visual Studio 2015
 * Clone this repository
 * Open the solution in visual studio 2015
-* Click the "run" green arrow - you will automatically be redirected to the page
+* In the directory GummyBearApp>src>GummyBearApp run the command dotnet ef database update
+* In the same directory, open the file script.sql in MSSQL Management Studio and execute it
+* Click the "run" green arrow in Microsoft visual studio - you will automatically be redirected to the page
 
 ### Technologies Used
 
