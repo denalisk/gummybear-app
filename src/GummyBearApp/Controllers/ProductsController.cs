@@ -18,7 +18,7 @@ namespace GummyBearApp.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            return View();
+            return View(db.GummyBears.ToList());
         }
 
         public IActionResult Create()

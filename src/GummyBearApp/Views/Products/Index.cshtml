@@ -1,5 +1,29 @@
-﻿@model GummyBearApp.Models.GummyBear
+﻿@model IEnumerable<GummyBearApp.Models.GummyBear>
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Browse our collection of gummy bears. They're delicious!</h1>
+
+@foreach (var bear in Model)
+{
+    <div class="product-holder">
+        <div class="image-holder">
+            <img src="@bear.ImageSrc" alt="@bear.ImageAlt"
+        </div>
+        <ul>
+            <li>
+                @Html.DisplayFor(model => bear.Name)
+            </li>
+            <li>
+                @Html.DisplayFor(model => bear.Cost)
+            </li>
+            <li>
+                @Html.DisplayFor(model => bear.Country)
+            </li>
+
+        </ul>
+    </div>
+
 }
