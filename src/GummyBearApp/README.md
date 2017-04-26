@@ -6,7 +6,7 @@
 
 ## Description
 
-#### A simple website built to for a fictitious gummy bear online merchant. Users can view existing gummy bears, edit their details, and add new gummy bears to the database. Users can also delete existing gummy bears.
+#### A simple website built to for a fictitious gummy bear online merchant. Users can view existing gummy bears, edit their details, and add new gummy bears to the database. Users can also delete existing gummy bears. Styling generally based off of http://www.fancyfortunecookies.com/
 
 ## Specifications
 
